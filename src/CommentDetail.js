@@ -1,25 +1,26 @@
 import React from 'react';
-import faker from 'faker';
 
-export default function comment() {
+ const CommentDetails = ({name,date,text,avatar}) => {
     return (
         <div>
             <div className = "comment">
         <a href="/" className = "avatar">
-          <img alt="avatar" src={faker.image.avatar()} />
+          <img alt="avatar" src= {avatar} />
         </a>
       <div className="content">
         <a href="/" className="author">
-          Sam
+          {name}
         </a>
         <div className="metadata">
 
-        <span className="date"> Today at 6:00 pm</span>
+        <span className="date"> {date}   </span>
         </div>
-        <div className="text">Nice blog post!</div>
+        <div className="text"> {text}  </div>
 
       </div>
       </div>
         </div>
     )
 }
+
+export default CommentDetails
